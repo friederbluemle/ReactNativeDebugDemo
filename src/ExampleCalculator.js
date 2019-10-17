@@ -1,7 +1,7 @@
 // @flow
 
-import React, { Component } from 'react';
-import { StyleSheet, Text, TextInput, View } from 'react-native';
+import React, {Component} from 'react';
+import {StyleSheet, Text, TextInput, View} from 'react-native';
 
 type Props = {};
 
@@ -31,7 +31,7 @@ export default class ExampleCalculator extends Component<Props, State> {
     if (isNaN(value)) {
       value = 0;
     }
-    this.setState({ value1: value });
+    this.setState({value1: value});
   }
 
   _onChangeTextValue2(text: string) {
@@ -39,7 +39,7 @@ export default class ExampleCalculator extends Component<Props, State> {
     if (isNaN(value)) {
       value = 0;
     }
-    this.setState({ value2: value });
+    this.setState({value2: value});
   }
 
   render() {

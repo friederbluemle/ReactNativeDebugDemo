@@ -1,7 +1,15 @@
 // @flow
 
-import React, { Component } from 'react';
-import { LayoutAnimation, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import React, {Component} from 'react';
+import {
+  LayoutAnimation,
+  Platform,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 
 const LABEL_COLOR = '#6A8DA4';
 
@@ -89,7 +97,9 @@ export default class ExampleStatistics extends Component<Props, State> {
           <View style={[styles.titleView, styles.center]}>
             <Text style={styles.title}>STATISTICS</Text>
           </View>
-          <TouchableOpacity style={[styles.rightButton, styles.center]} onPress={() => this.props.onPressExit()}>
+          <TouchableOpacity
+            style={[styles.rightButton, styles.center]}
+            onPress={() => this.props.onPressExit()}>
             <Text style={styles.rightButtonText}>×</Text>
           </TouchableOpacity>
         </View>
@@ -112,8 +122,11 @@ export default class ExampleStatistics extends Component<Props, State> {
   _audienceOverview() {
     return (
       <View style={[styles.cellView]}>
-        <View style={[styles.cellViewTitleView, styles.audienceOverviewTitleView]}>
-          <Text style={[styles.cellViewTitle, styles.audienceOverviewTitle]}>AUDIENCE OVERVIEW</Text>
+        <View
+          style={[styles.cellViewTitleView, styles.audienceOverviewTitleView]}>
+          <Text style={[styles.cellViewTitle, styles.audienceOverviewTitle]}>
+            AUDIENCE OVERVIEW
+          </Text>
         </View>
         <View style={styles.cellViewContent}>
           <View style={[styles.aoItemRow, styles.horizontal]}>
@@ -121,8 +134,8 @@ export default class ExampleStatistics extends Component<Props, State> {
               <Text style={styles.aoItemText}>People</Text>
             </View>
             <View style={[styles.aoItemRightCol, styles.horizontal]}>
-              <View style={[styles.aoItemValue, { flex: this.state.aoPeople }]} />
-              <View style={{ flex: 10 - this.state.aoPeople }} />
+              <View style={[styles.aoItemValue, {flex: this.state.aoPeople}]} />
+              <View style={{flex: 10 - this.state.aoPeople}} />
             </View>
           </View>
           <View style={[styles.aoItemRow, styles.horizontal]}>
@@ -130,8 +143,8 @@ export default class ExampleStatistics extends Component<Props, State> {
               <Text style={styles.aoItemText}>Likes</Text>
             </View>
             <View style={[styles.aoItemRightCol, styles.horizontal]}>
-              <View style={[styles.aoItemValue, { flex: this.state.aoLikes }]} />
-              <View style={{ flex: 10 - this.state.aoLikes }} />
+              <View style={[styles.aoItemValue, {flex: this.state.aoLikes}]} />
+              <View style={{flex: 10 - this.state.aoLikes}} />
             </View>
           </View>
           <View style={[styles.aoItemRow, styles.horizontal]}>
@@ -139,8 +152,8 @@ export default class ExampleStatistics extends Component<Props, State> {
               <Text style={styles.aoItemText}>Shares</Text>
             </View>
             <View style={[styles.aoItemRightCol, styles.horizontal]}>
-              <View style={[styles.aoItemValue, { flex: this.state.aoShares }]} />
-              <View style={{ flex: 10 - this.state.aoShares }} />
+              <View style={[styles.aoItemValue, {flex: this.state.aoShares}]} />
+              <View style={{flex: 10 - this.state.aoShares}} />
             </View>
           </View>
           <View style={[styles.aoItemRow, styles.horizontal]}>
@@ -148,20 +161,40 @@ export default class ExampleStatistics extends Component<Props, State> {
               <Text style={styles.aoItemText}>Comments</Text>
             </View>
             <View style={[styles.aoItemRightCol, styles.horizontal]}>
-              <View style={[styles.aoItemValue, { flex: this.state.aoComments }]} />
-              <View style={{ flex: 10 - this.state.aoComments }} />
+              <View
+                style={[styles.aoItemValue, {flex: this.state.aoComments}]}
+              />
+              <View style={{flex: 10 - this.state.aoComments}} />
             </View>
           </View>
 
           <View style={[styles.aoItemMarkerRow, styles.horizontal]}>
             <View style={styles.aoItemMarkerLeftCol} />
             <View style={[styles.aoItemMarkerRightCol, styles.horizontal]}>
-              <Text style={[styles.aoItemMarkerCell, styles.aoItemMarkerCenter]}>0</Text>
-              <Text style={[styles.aoItemMarkerCell, styles.aoItemMarkerCenter]}>100</Text>
-              <Text style={[styles.aoItemMarkerCell, styles.aoItemMarkerCenter]}>200</Text>
-              <Text style={[styles.aoItemMarkerCell, styles.aoItemMarkerCenter]}>300</Text>
-              <Text style={[styles.aoItemMarkerCell, styles.aoItemMarkerCenter]}>400</Text>
-              <Text style={[styles.aoItemMarkerCell, styles.aoItemMarkerCenter]}>500</Text>
+              <Text
+                style={[styles.aoItemMarkerCell, styles.aoItemMarkerCenter]}>
+                0
+              </Text>
+              <Text
+                style={[styles.aoItemMarkerCell, styles.aoItemMarkerCenter]}>
+                100
+              </Text>
+              <Text
+                style={[styles.aoItemMarkerCell, styles.aoItemMarkerCenter]}>
+                200
+              </Text>
+              <Text
+                style={[styles.aoItemMarkerCell, styles.aoItemMarkerCenter]}>
+                300
+              </Text>
+              <Text
+                style={[styles.aoItemMarkerCell, styles.aoItemMarkerCenter]}>
+                400
+              </Text>
+              <Text
+                style={[styles.aoItemMarkerCell, styles.aoItemMarkerCenter]}>
+                500
+              </Text>
             </View>
           </View>
         </View>
@@ -173,16 +206,24 @@ export default class ExampleStatistics extends Component<Props, State> {
     return (
       <View style={[styles.cellView]}>
         <View style={[styles.cellViewTitleView, styles.visitorsTitleView]}>
-          <Text style={[styles.cellViewTitle, styles.visitorsTitle]}>VISITORS</Text>
+          <Text style={[styles.cellViewTitle, styles.visitorsTitle]}>
+            VISITORS
+          </Text>
         </View>
         <View style={styles.cellViewContent}>
           <View style={[styles.visitorsBarRow, styles.horizontal]}>
-            <View style={[styles.newVisitorsBar, styles.newVisitorsColor, { flex: this.state.newVisitors }]} />
+            <View
+              style={[
+                styles.newVisitorsBar,
+                styles.newVisitorsColor,
+                {flex: this.state.newVisitors},
+              ]}
+            />
             <View
               style={[
                 styles.returningVisitorsBar,
                 styles.returningVisitorsColor,
-                { flex: this.state.returningVisitors },
+                {flex: this.state.returningVisitors},
               ]}
             />
           </View>
@@ -216,7 +257,9 @@ export default class ExampleStatistics extends Component<Props, State> {
     return (
       <View style={[styles.cellView]}>
         <View style={[styles.cellViewTitleView, styles.sessionsTitleView]}>
-          <Text style={[styles.cellViewTitle, styles.visitorsTitle]}>SESSIONS</Text>
+          <Text style={[styles.cellViewTitle, styles.visitorsTitle]}>
+            SESSIONS
+          </Text>
         </View>
         <View>
           <View style={styles.hiddenView}>
@@ -224,7 +267,7 @@ export default class ExampleStatistics extends Component<Props, State> {
             <View>
               <View>
                 <View>
-                  <Text> </Text>
+                  <Text />
                 </View>
               </View>
             </View>
@@ -243,50 +286,64 @@ export default class ExampleStatistics extends Component<Props, State> {
             </View>
             <View style={styles.sessionsBarCol}>
               <View style={styles.sessionsBarWrapper}>
-                <View style={{ flex: 10 - this.state.sessionsSun }} />
-                <View style={[styles.sessionsBar, { flex: this.state.sessionsSun }]} />
+                <View style={{flex: 10 - this.state.sessionsSun}} />
+                <View
+                  style={[styles.sessionsBar, {flex: this.state.sessionsSun}]}
+                />
               </View>
               <Text style={styles.sessionsBarText}>SUN</Text>
             </View>
             <View style={styles.sessionsBarCol}>
               <View style={styles.sessionsBarWrapper}>
-                <View style={{ flex: 10 - this.state.sessionsMon }} />
-                <View style={[styles.sessionsBar, { flex: this.state.sessionsMon }]} />
+                <View style={{flex: 10 - this.state.sessionsMon}} />
+                <View
+                  style={[styles.sessionsBar, {flex: this.state.sessionsMon}]}
+                />
               </View>
               <Text style={styles.sessionsBarText}>MON</Text>
             </View>
             <View style={styles.sessionsBarCol}>
               <View style={styles.sessionsBarWrapper}>
-                <View style={{ flex: 10 - this.state.sessionsTue }} />
-                <View style={[styles.sessionsBar, { flex: this.state.sessionsTue }]} />
+                <View style={{flex: 10 - this.state.sessionsTue}} />
+                <View
+                  style={[styles.sessionsBar, {flex: this.state.sessionsTue}]}
+                />
               </View>
               <Text style={styles.sessionsBarText}>TUE</Text>
             </View>
             <View style={styles.sessionsBarCol}>
               <View style={styles.sessionsBarWrapper}>
-                <View style={{ flex: 10 - this.state.sessionsWed }} />
-                <View style={[styles.sessionsBar, { flex: this.state.sessionsWed }]} />
+                <View style={{flex: 10 - this.state.sessionsWed}} />
+                <View
+                  style={[styles.sessionsBar, {flex: this.state.sessionsWed}]}
+                />
               </View>
               <Text style={styles.sessionsBarText}>WED</Text>
             </View>
             <View style={styles.sessionsBarCol}>
               <View style={styles.sessionsBarWrapper}>
-                <View style={{ flex: 10 - this.state.sessionsThu }} />
-                <View style={[styles.sessionsBar, { flex: this.state.sessionsThu }]} />
+                <View style={{flex: 10 - this.state.sessionsThu}} />
+                <View
+                  style={[styles.sessionsBar, {flex: this.state.sessionsThu}]}
+                />
               </View>
               <Text style={styles.sessionsBarText}>THU</Text>
             </View>
             <View style={styles.sessionsBarCol}>
               <View style={styles.sessionsBarWrapper}>
-                <View style={{ flex: 10 - this.state.sessionsFri }} />
-                <View style={[styles.sessionsBar, { flex: this.state.sessionsFri }]} />
+                <View style={{flex: 10 - this.state.sessionsFri}} />
+                <View
+                  style={[styles.sessionsBar, {flex: this.state.sessionsFri}]}
+                />
               </View>
               <Text style={styles.sessionsBarText}>FRI</Text>
             </View>
             <View style={styles.sessionsBarCol}>
               <View style={styles.sessionsBarWrapper}>
-                <View style={{ flex: 10 - this.state.sessionsSat }} />
-                <View style={[styles.sessionsBar, { flex: this.state.sessionsSat }]} />
+                <View style={{flex: 10 - this.state.sessionsSat}} />
+                <View
+                  style={[styles.sessionsBar, {flex: this.state.sessionsSat}]}
+                />
               </View>
               <Text style={styles.sessionsBarText}>SAT</Text>
             </View>

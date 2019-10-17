@@ -1,7 +1,7 @@
 // @flow
 
-import React, { Component } from 'react';
-import { PanResponder, ScrollView, StyleSheet, View } from 'react-native';
+import React, {Component} from 'react';
+import {PanResponder, ScrollView, StyleSheet, View} from 'react-native';
 
 const DEFAULT_HEIGHT = 300;
 
@@ -33,7 +33,11 @@ export default class ExampleTouch extends Component<Props, State> {
         //return false;
       },
       onMoveShouldSetPanResponder: (event, gestureState) => {
-        console.log('onMoveShouldSetPanResponder', gestureState.dx, gestureState.dy);
+        console.log(
+          'onMoveShouldSetPanResponder',
+          gestureState.dx,
+          gestureState.dy,
+        );
         // Called for every touch move on the View when it is not the responder.
         // When there is obvious touch movement vertically, clain touch responsiveness.
         return true;
@@ -49,7 +53,7 @@ export default class ExampleTouch extends Component<Props, State> {
         console.log('onPanResponderRelease', gestureState.dx, gestureState.dy);
         // The user has released all touches while this view is the
         // responder. This typically means a gesture has succeeded
-        const { dy } = gestureState;
+        const {dy} = gestureState;
         this._height -= dy;
       },
       onPanResponderTerminate: () => {
@@ -66,7 +70,7 @@ export default class ExampleTouch extends Component<Props, State> {
   _updatePanelViewNativeStyle(dy: number) {
     this._panelRef &&
       this._panelRef.setNativeProps({
-        style: { height: this._height - dy },
+        style: {height: this._height - dy},
       });
   }
 
@@ -84,8 +88,7 @@ export default class ExampleTouch extends Component<Props, State> {
           key={'Panel'}
           style={styles.panel}
           ref={ref => (this._panelRef = ref)}
-          {...this._panResponder.panHandlers}
-        >
+          {...this._panResponder.panHandlers}>
           <View style={styles.bar} />
           <ScrollView horizontal={true}>
             <View style={[styles.square, styles.color1]} />
