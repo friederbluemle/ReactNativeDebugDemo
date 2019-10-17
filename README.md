@@ -17,10 +17,7 @@ react-native start
 
 #### Screenshots
 
-![Screenshot](https://github.com/vinceyuan/ReactNativeDebugDemo/raw/master/MainView.png)
-
-![Screenshot](https://github.com/vinceyuan/ReactNativeDebugDemo/raw/master/Example1.png)
-
-![Screenshot](https://github.com/vinceyuan/ReactNativeDebugDemo/raw/master/Example2.png)
-
-![Screenshot](https://github.com/vinceyuan/ReactNativeDebugDemo/raw/master/Example3.png)
+![Screenshot](MainView.png)
+![Screenshot](Example1.png)
+![Screenshot](Example2.png)
+![Screenshot](Example3.png)
