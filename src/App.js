@@ -1,11 +1,11 @@
 // @flow
 
-import React, {Component} from 'react';
 import {UIManager} from 'react-native';
-import {StackNavigator} from 'react-navigation';
-
-// Hack to support horizontal navigation animation on Android.
-import CardStackStyleInterpolator from 'react-navigation/src/views/CardStack/CardStackStyleInterpolator';
+import {createAppContainer} from 'react-navigation';
+import {
+  createStackNavigator,
+  StackViewStyleInterpolator,
+} from 'react-navigation-stack';
 
 import Home from './Home';
 import ExampleCalculator from './ExampleCalculator';
@@ -17,7 +17,7 @@ import ExampleTouch from './ExampleTouch';
 UIManager.setLayoutAnimationEnabledExperimental &&
   UIManager.setLayoutAnimationEnabledExperimental(true);
 
-const RootStack = StackNavigator(
+const RootStack = createStackNavigator(
   {
     Home: {
       screen: Home,
@@ -33,14 +33,10 @@ const RootStack = StackNavigator(
     initialRouteName: 'Home',
     transitionConfig: () => ({
       screenInterpolator: sceneProps => {
-        return CardStackStyleInterpolator.forHorizontal(sceneProps);
+        return StackViewStyleInterpolator.forHorizontal(sceneProps);
       },
     }),
   },
 );
 
-export default class App extends Component<void, void> {
-  render() {
-    return <RootStack />;
-  }
-}
+export default createAppContainer(RootStack);
