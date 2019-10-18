@@ -22,8 +22,9 @@ export default class ExampleTouch extends Component<Props, State> {
     title: 'Touch',
   };
 
-  componentWillMount() {
-    console.log('componentWillMount');
+  constructor() {
+    super();
+    console.log('constructor');
     this._panResponder = PanResponder.create({
       onStartShouldSetPanResponder: () => {
         console.log('onStartShouldSetPanResponder');
